@@ -24,12 +24,14 @@ library:
   dependencies:
   - base
   - rdf4h
+  - mtl
+  - lens
   source-dirs: library
 
 executables:
   schemaorg:
     source-dirs: executable
-    main: Main.hs
+    main: MainExecutable.hs
     dependencies:
     - base
     - schemaorg
@@ -41,7 +43,7 @@ executables:
 benchmarks:
   schemaorg-benchmarks:
     source-dirs: benchmark
-    main: Main.hs
+    main: MainExecutable.hs
     dependencies:
     - base
     - schemaorg
@@ -54,7 +56,7 @@ benchmarks:
 tests:
   schemaorg-test-suite:
     source-dirs: test-suite
-    main: Main.hs
+    main: MainExecutable.hs
     dependencies:
     - base
     - schemaorg
