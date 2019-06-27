@@ -6,5 +6,5 @@ import Download(downloadSchema)
 
 app :: (MonadIO m) => AppT m ()
 app = do
-  schema <- downloadSchema "3.7a"
-  liftIO $ print $ show schema
+  schema <- downloadSchema "3.7"
+  liftIO $ putStrLn $ show schema
